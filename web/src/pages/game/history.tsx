@@ -33,7 +33,7 @@ export default function History() {
   const { account } = useAccount();
   const { uiStore } = useDojoContext();
 
-  const { games, onGoingGames, endedGames } = useGamesByPlayer(account?.address || "0x0");
+  const { games, onGoingGames, endedGames } = useGamesByPlayer( `0x${BigInt(account?.address|| "0x0").toString(16)}` );
 
   return (
     <Layout

@@ -36,6 +36,7 @@ export const ConnectModal = observer(() => {
     uiStore.closeConnectModal();
   };
 
+
   return (
     <Modal motionPreset="slideInBottom" isCentered isOpen={uiStore.modals.connect !== undefined} onClose={onClose}>
       <ModalOverlay />
@@ -48,13 +49,14 @@ export const ConnectModal = observer(() => {
             {connectors.map((connector) => {
               const isBurner = connector.id === "dojoburner";
               const isPredeployed = connector.id === "dojopredeployed";
+              const isController = connector.id === "cartridge";
 
               if (!isKatana && (isBurner || isPredeployed)) {
                 // burner or predeployed not on katana
                 return null;
               }
 
-              if (isKatana && !(isBurner || isPredeployed)) {
+              if (isKatana && !(isBurner || isPredeployed || isController)) {
                 // not burner or predeployed on katana
                 return null;
               }

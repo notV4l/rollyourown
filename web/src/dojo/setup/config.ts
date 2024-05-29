@@ -104,10 +104,10 @@ const snSepolia: DojoChainConfig = {
   name: "SEPOLIA",
   chainConfig: sepolia,
   rpcUrl: "https://api.cartridge.gg/rpc/starknet-sepolia/v0_7",
-  // toriiUrl: "https://api.cartridge.gg/x/ryosepolia/torii/graphql",
-  // toriiWsUrl: "wss://api.cartridge.gg/x/ryosepolia/torii/graphql/ws",
-  toriiUrl: process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT || "http://localhost:8080/graphql",
-  toriiWsUrl: process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT_WS || "ws://localhost:8080/graphql/ws",
+  toriiUrl: "https://api.cartridge.gg/x/ryosepolia/torii/graphql",
+  toriiWsUrl: "wss://api.cartridge.gg/x/ryosepolia/torii/graphql/ws",
+  // toriiUrl: process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT || "http://localhost:8080/graphql",
+  // toriiWsUrl: process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT_WS || "ws://localhost:8080/graphql/ws",
   masterAddress: undefined,
   masterPrivateKey: undefined,
   accountClassHash: undefined,
@@ -133,7 +133,7 @@ export const dojoContextConfig = {
   KATANA: katanaLocal,
   KATANA_SLOT_420: katanaSlot420,
   // "KATANA_SLOT_421": katanaSlot421,
-  // "SN_SEPOLIA": snSepolia,
+  SN_SEPOLIA: snSepolia,
   // "SN_MAIN": snMainnet,
 };
 
@@ -141,7 +141,7 @@ export const dojoChains = [
   katanaLocal,
   katanaSlot420,
   // katanaSlot421,
-  // snSepolia,
+  snSepolia,
   // snMainnet,
 ];
 
