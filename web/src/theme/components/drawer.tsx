@@ -8,6 +8,10 @@ export const Drawer: ComponentMultiStyleConfig = {
     size: "sm",
   },
   baseStyle: {
+    overlay: {
+      zIndex: "999 !important",
+    },
+
     dialog: {
       pointerEvents: "auto",
       backgroundColor: "neon.800",
