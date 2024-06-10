@@ -105,8 +105,8 @@ const cartridgeConnector = new CartridgeConnector(
     },
   ],
   {
-    url: "https://keychain-git-preview-test.preview.cartridge.gg/",
-    // url: "https://x.cartridge.gg",
+    // url: "https://keychain-git-preview-test.preview.cartridge.gg/",
+    url: "https://x.cartridge.gg",
     // theme: colors.neon["200"] as string,
     theme: "rollyourown",
     // theme: {
